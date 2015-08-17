@@ -1,0 +1,96 @@
+
+.form-group {
+    position: relative;
+    font-family: $font-secondary;
+}
+
+.form-control {
+    box-shadow: none;
+    &:focus {
+        border-color: $text-color;
+        box-shadow: none;
+    }
+}
+
+
+
+/* Form style */
+
+mark.validate {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: transparent none;
+    position: absolute;
+    top:32px;
+    right: -10px;
+    text-align: center;
+}
+mark.valid {
+//	background: url(../images/success.gif) no-repeat top left;
+    .fa {
+        color: $brand-success;
+        &:before {
+            content: "\f00c";
+        
+        }
+    }
+}
+mark.error {
+//	background: url(../images/error.gif) no-repeat top left;
+    .fa {
+        color: $brand-danger;
+        &:before {
+            content: "\f071";
+        }
+    }
+}
+
+
+#contact input, #contact textarea, #contact select {
+
+}
+#contact select {
+	
+	margin: 8px 0;
+}
+#contact input#verify {
+	
+}
+#contact textarea {
+	
+}
+
+#contact input.error, #contact textarea.error, #contact select.error {
+border-color: $brand-danger;
+}
+#contact input.submit {
+	
+}
+#contact input.submit:hover {
+	
+}
+#contact input.submit:active, #contact input.submit:focus {
+	
+}
+
+
+
+#message { margin: 1em 0; padding: 0; display: block; background: transparent none; }
+
+.error_message { display: block; height: 22px; line-height: 22px; background: #FBE3E4 url('../img/error.gif') no-repeat 10px center; padding: 3px 10px 3px 35px; color:#8a1f11;border: 1px solid #FBC2C4; -webkit-border-radius:5px; }
+
+.loader { padding: 0 10px; }
+
+#contact #success_page h1 { background: url('../img/success.gif') left no-repeat; padding-left:22px; }
+
+/*#contact input[type="radio"] { width: 20px; margin-top:0px;}*/
+/*#contact .radio {width:100%;}*/
+
+
+
+#success_page {
+    @include breakpoint(md) {
+        padding: 50px 0;
+    }
+}

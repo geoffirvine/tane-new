@@ -1,0 +1,32 @@
+// Add bootstrap overrides here too
+
+
+$black: #363636;
+$white: #ffffff;
+
+$text-color: $black;
+$brand-primary: #52bad5;
+$orange: #b74017;
+
+$link-color: $brand-primary;
+
+$font-primary:  "Georgia", serif;
+$font-secondary: "proxima-nova", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+$padding-base-vertical:     10px !default;
+$padding-base-horizontal:   16px !default;
+
+$padding-large-vertical:    16px !default;
+$padding-large-horizontal:  24px !default;
+
+$grid-gutter-width: 30px;
+
+
+$border-radius-base:        0px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
+
+$btn-default-color:              $text-color !default;
+//$btn-default-bg:                 transparent !default;
+$btn-default-border:             $text-color !default;

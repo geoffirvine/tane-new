@@ -1,0 +1,301 @@
+
+#easing_wrapper {
+	width:100%;
+//	height:100%;
+}
+
+#easing {
+	top:10%;
+	width:50%;
+	z-index:101;
+}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+	/*
+		May cause issues on Android default browser (see #331 on GitHub).
+	*/
+	position:absolute;
+}
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
+
+
+.bcg {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    top:0;
+    left:0;
+    @include breakpoint(sm) {
+        height: 410px;
+    }
+    @include breakpoint(md) {
+        height: 430px;
+    }
+    @include breakpoint(lg) {
+        height: 500px;
+    }
+    
+    
+    @include breakpoint(xs) {
+	    background-size: cover;
+	    
+	    background-position: center center !important;
+	    display: table;
+	   
+    }
+    @include breakpoint(sm) {
+	    background-attachment: fixed;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    
+	    -ms-behavior: url('backgroundsize.htc');
+	    .touch & {
+		    background-attachment: scroll;
+	    }
+    }
+    
+}
+.img-slide {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    top:0;
+    left:0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 50px;
+    @include breakpoint(sm) {
+        height: 350px;
+    }
+    @include breakpoint(md) {
+        height: 400px;
+    }
+    @include breakpoint(lg) {
+        height: 450px;
+    }
+    
+    @include breakpoint(xs) {
+	    background-size: cover;
+	    
+	    background-position: center center !important;
+	    display: table;
+	   
+    }
+    @include breakpoint(sm) {
+	    background-attachment: fixed;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    
+	    -ms-behavior: url('backgroundsize.htc');
+	    .touch & {
+		    background-attachment: scroll;
+	    }
+    }
+    
+}
+.title-container {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+//    opacity: 0;
+    z-index: 101;
+   
+    h1 {
+        margin-bottom: 0;
+    }
+}
+.title-content {
+    
+    margin: -150px auto 0 auto;
+    max-width: 450px;
+    display: table-cell;
+    vertical-align: middle;
+    color: $white;
+    padding: 0 8%;
+    text-align: center;
+    position: relative;
+}
+
+
+#section1 {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(sm) {
+        height: 410px;
+    }
+    @include breakpoint(md) {
+         height: 430px;
+    }
+    @include breakpoint(lg) {
+        height: 500px;
+    }
+}
+
+
+.carousel {
+
+    height: 220px;
+    overflow: hidden;
+     
+    @include breakpoint(sm) {
+        height: 450px;
+    }
+    @include breakpoint(md) {
+         height: 600px;
+    }
+    @include breakpoint(lg) {
+        height: 650px;
+    }
+    .design-detail &, .generic-content & {
+        height: auto;
+        overflow: visible;
+        margin-bottom: 40px;
+    }
+}
+
+.carousel-inner {
+
+    > .item {
+        height: 100%;
+
+        >img {
+            
+            @include breakpoint(sm) {
+            min-width: 100%;
+            }
+        }
+    }
+}
+
+.carousel-control {
+    color: $gray;
+        text-shadow: none;
+    width: 10%;
+    &:hover, &:focus {
+    color: $gray;
+    }
+    &.left, &.right {
+        background: none;
+    }
+    
+    &.left {
+        @include breakpoint(md) {
+        left:-10%;
+        }
+    
+    }
+    &.right {
+        @include breakpoint(md) {
+    right:-10%;
+        }
+    }
+    .icon-prev, .icon-next {
+        &:before {
+        content: ' ';
+        }
+    }
+    .icon-prev {
+        
+    }
+    .icon-next {
+        
+    }
+}
+
+.carousel-indicators {
+    z-index: 110;
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+
+
+
+
+
+.logo {
+    
+    background-image: url(../images/tane.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    width: 150px;
+    height: 113px;
+    display: block;
+    margin: 0 auto;
+    transition: all .2s ease;
+    
+    @include breakpoint(sm) {
+       width: 200px;
+        height: 150px;
+    }
+    
+    @include breakpoint(lg) {
+        width: 250px;
+        height: 188px;
+    }
+    
+    .no-svg & {
+        background-image: url(../images/tane.png);
+    }
+    
+}

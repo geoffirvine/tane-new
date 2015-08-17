@@ -1,0 +1,89 @@
+
+
+body {
+//	font-family: "proxima-nova", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $font-secondary;
+	font-size: 14px;
+	line-height: 1.5;
+	
+}
+h1, h2, h3, h4 {
+	font-family: $font-secondary;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	line-height: 1.5;
+    @include breakpoint(xs) {
+    
+    }
+	
+}
+h1 {
+
+    font-weight: 600;
+    line-height: 1;
+    @include breakpoint(xs) {
+        font-size: 2.1em;
+        margin-top: 5px;
+    }
+}
+h2 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.2;
+    
+     @include breakpoint(sm) {
+        font-size: 1.6em;
+    }
+    @include breakpoint(md) {
+        font-size: 1.75em;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+h3 {
+    font-weight: 300;
+    font-size: 1.4em
+        
+}
+h4 {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+a {
+    transition: all .2s ease;
+    &:hover {
+        text-decoration: none;
+    }
+    address & {
+        color: $text-color;
+    }
+}
+
+
+
+.btn-default {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    &:hover, &:focus {
+        color: $brand-primary;
+        border-color: $brand-primary;
+        background: none;
+    }
+}
+
+blockquote {
+    color: lighten($black, 40%);
+    font-family: $font-secondary;
+    font-weight: 300;
+    font-size: 0.9em;
+    display: block;
+    clear: both;
+    @include breakpoint(md) {
+        font-size: 1.2em;
+    }
+}
